@@ -10,6 +10,7 @@ set -euxo pipefail
 mvn -q package
 
 oc registry login --skip-check=true
+echo $?
 
 docker pull openliberty/open-liberty:kernel-java8-openj9-ubi
 
